@@ -4,44 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/Develop/Learning/Entregables/Entregable-1/styles/styles.css">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/Develop/Learning/Entregables/Entregable-1/styles/entregable.css">
 </head>
 
+<header>
+    <h1>ToDoList</h1>
+</header>
+
+
+<main>
+<section class="container">
+    <h2>Lista de tareas</h2>
+
+    <input type="text" id="tarea" placeholder="Terminar la Web">
+    <button id="boton">Añadir</button> 
+    <button id="boton">Reset</button>
+    
+</ul>
+</section>
+
+
+<section>
+    <h2>Pendientes</h2>
+    <ul id="pendientes">
+        <ul id="lista">
+            <li>
+                <input type="checkbox">
+                <span>Lavar la ropa</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Cocinar</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Estudiar</span>
+            </li>
+        </ul>
+    </ul>
+</section>
+
+
+<section>
+    <h2>Terminadas</h2>
+    <ul id="terminadas">
+        <ul id="lista">
+            <li>
+                <input type="hidden">
+                <span>Estudiar</span>
+            </li>
+    </ul>
+</section>
+</main>
+
 <body>
-
-    <header>
-        <h1 class="bordes-de-titulos">T D L</h1>
-        <h3>To Do List</h3>
-    </header>
-
-    <div>
-        <h2 id="borde-circular" class="alineador">Tareas</h2>
-    </div>
-
-    <main>
-        <section>
-            <section class="bordes-de-titulos">
-                <div class="creador-de-tareas alineador">
-                    <input type="text" id="input" placeholder="Programar">
-                    <br>
-                    <input type="text" id="input" placeholder="Mirar series">
-                    <br>
-                    <input type="text" id="input" placeholder="Sacar al perro">
-                    <br>
-                    <input type="text" id="input" placeholder="Ir al banco">
-                    <section>
-                        <br>
-                        <button id="add">Añadir</button>
-                    </section>
-                </div>
-            </section>
-    </main>
 </body>
 
 </html>

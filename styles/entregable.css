@@ -1,62 +1,170 @@
-body {
-    background-color: bisque;
-    font-family:Helvetica;
-    font-size: 16px;
-    margin: 8px;
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 10%;
-    width: 100%;
-    margin: 16px;
-}
-main{
-    display: flex;
-    flex-direction: column;
-    margin: 16px;
-}
-
-h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    margin: center;
+/* Resetea el margen y el padding para todos los elementos */
+* {
+    margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: rgba(255, 153, 0, 0.366);
-    border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
-    padding-bottom: 2px;
 }
 
-h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-align: center;
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: bisque; /* Color de fondo */
+    font-family: Helvetica; /* Fuente del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    height: 100%; /* Altura completa del viewport */
 }
 
-
-
-input{
-    margin-bottom: 5px;
-    padding: 5px;
-    margin: 16px;
+/* Estilos para el header de la página */
+header {
+    display: flex; /* Utiliza Flexbox para el layout */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    height: 10%; /* Altura del header */
+    width: 100%; /* Ancho completo del viewport */
+    margin: 0; /* Sin margen externo */
 }
 
+/* Contenedor del título en el header */
+.header-title {
+    display: flex; /* Utiliza Flexbox para el layout */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* Ancho completo del viewport */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilos para el título principal */
+.title {
+    font-size: 2.5em; /* Tamaño de la fuente del título */
+    font-weight: 700; /* Grosor de la fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    background-color: rgba(255, 153, 0, 0.366); /* Color de fondo con opacidad */
+    border-radius: 50px; /* Bordes redondeados */
+    border: 5px inset rgb(155, 91, 22); /* Borde estilo inset */
+}
+
+/* Contenedor principal para la lista de tareas */
+.list-container {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    width: 100%; /* Ancho completo del viewport */
+}
+
+/* Contenedor de la lista de tareas */
+.lista-tareas {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-width: fit-content; /* Ancho mínimo adaptado al contenido */
+    width: 200px; /* Ancho fijo */
+    margin: 10px auto; /* Espaciado vertical y centrado horizontal */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    border: 5px solid rgb(155, 91, 22); /* Borde sólido */
+}
+
+/* Estilos para el título dentro del contenedor de tareas */
+.lista-tareas h2 {
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilos para el input de añadir tareas */
+.añadir-tareas input {
+    padding: 8px; /* Espaciado interno */
+    margin: 8px; /* Espaciado externo */
+    max-width: 150px; /* Ancho máximo */
+}
+
+/* Estilos para el botón de añadir tareas */
+.añadir-tareas button {
+    padding: 8px; /* Espaciado interno */
+    margin: 8px; /* Espaciado externo */
+    max-width: fit-content; /* Ancho adaptado al contenido */
+}
+
+/* Contenedor de tareas pendientes */
+.tareas-pendientes {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-height: 50px; /* Altura mínima */
+    width: 200px; /* Ancho fijo */
+    margin: 10px auto; /* Espaciado vertical y centrado horizontal */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    border: 5px solid rgb(155, 91, 22); /* Borde sólido */
+}
+
+/* Lista de tareas pendientes */
+.lista-pendiente {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    text-align: left; /* Alineación del texto a la izquierda */
+    height: 100%; /* Altura completa del contenedor */
+    width: 100%; /* Ancho completo del contenedor */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Sin margen externo */
+}
+
+/* Estilos para cada tarea en la lista de pendientes */
+.tarea {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: row; /* Organiza los elementos en una fila */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Contenedor de tareas terminadas */
+.tareas-terminadas {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Alineación del texto al centro */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-height: 50px; /* Altura mínima */
+    width: 200px; /* Ancho fijo */
+    margin: 10px auto; /* Espaciado vertical y centrado horizontal */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 50px; /* Bordes redondeados */
+    border: 5px solid rgb(155, 91, 22); /* Borde sólido */
+}
+
+/* Lista de tareas finalizadas */
+.lista-terminada {
+    display: flex; /* Utiliza Flexbox para el layout */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    text-align: left; /* Alineación del texto a la izquierda */
+    height: 100%; /* Altura completa del contenedor */
+    width: 100%; /* Ancho completo del contenedor */
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Sin margen externo */
+}
+
+/* Estilos generales para los inputs */
+input {
+    margin-bottom: 5px; /* Espaciado inferior */
+    padding: 5px; /* Espaciado interno */
+    margin: 16px; /* Espaciado externo */
+}
+
+/* Estilos generales para los botones */
 button {
-    margin-bottom: 5px;
-    padding: 5px;
-    margin: 16px;
+    padding: 5px 10px; /* Espaciado interno */
+}
+
+/* Estilos responsivos para pantallas más grandes */
+@media screen and (min-width: 480px) {
+    .list-container {
+        display: flex; /* Utiliza Flexbox para el layout */
+        flex-direction: row; /* Organiza los elementos en una fila */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea */
+        height: 100%; /* Altura completa del contenedor */
+        width: 100%; /* Ancho completo del contenedor */
+    }
 }

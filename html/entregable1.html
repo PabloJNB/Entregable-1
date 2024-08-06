@@ -8,57 +8,88 @@
     <link rel="stylesheet" href="/Develop/Learning/Entregables/Entregable-1/styles/entregable.css">
 </head>
 
-<header>
-    <h1>ToDoList</h1>
-</header>
-
-
-<main>
-<section class="container">
-    <h2>Lista de tareas</h2>
-
-    <input type="text" id="tarea" placeholder="Terminar la Web">
-    <button id="boton">Añadir</button> 
-    <button id="boton">Reset</button>
-    
-</ul>
-</section>
-
-
-<section>
-    <h2>Pendientes</h2>
-    <ul id="pendientes">
-        <ul id="lista">
-            <li>
-                <input type="checkbox">
-                <span>Lavar la ropa</span>
-            </li>
-            <li>
-                <input type="checkbox">
-                <span>Cocinar</span>
-            </li>
-            <li>
-                <input type="checkbox">
-                <span>Estudiar</span>
-            </li>
-        </ul>
-    </ul>
-</section>
-
-
-<section>
-    <h2>Terminadas</h2>
-    <ul id="terminadas">
-        <ul id="lista">
-            <li>
-                <input type="hidden">
-                <span>Estudiar</span>
-            </li>
-    </ul>
-</section>
-</main>
-
 <body>
+    <header>
+        <!-- Contenedor del título principal del sitio -->
+        <div class="header-title">
+            <h1 class="title">ToDoList</h1>
+        </div>
+    </header>
+
+    <main class="list-container">
+        <!-- Contenedor de la sección principal para agregar tareas -->
+        <div class="lista-tareas">
+            <!-- Contenedor del título de la lista de tareas -->
+            <div class="elementos-tareas">
+                <h2>Lista de tareas</h2>
+            </div>
+
+            <!-- Contenedor para el campo de entrada de nuevas tareas -->
+            <div class="elementos-tareas">
+                <input type="text" id="tarea" placeholder="Terminar la Web">
+            </div>
+            
+            <!-- Contenedor para el botón de añadir una nueva tarea -->
+            <div class="elementos-tareas">
+                <button id="boton">Añadir</button>
+            </div>
+        </div>
+
+        <!-- Contenedor de tareas pendientes -->
+        <div class="tareas-pendientes">
+            <div>
+                <h2>Pendientes</h2>
+            </div>
+            
+            <!-- Lista de tareas pendientes -->
+            <ul class="lista-pendiente">
+                <!-- Elemento de tarea pendiente -->
+                <li class="tarea">
+                    <input class="pendientesCbox" type="checkbox">
+                    <h5>Lavar la ropa</h5>
+                </li>
+                <!-- Elemento de tarea pendiente -->
+                <li class="tarea">
+                    <input class="pendientesCbox" type="checkbox">
+                    <h5>Cocinar</h5>
+                </li>
+                <!-- Elemento de tarea pendiente -->
+                <li class="tarea">
+                    <input class="pendientesCbox" type="checkbox">
+                    <h5>Comer</h5>
+                </li>
+                <!-- Elemento de tarea pendiente -->
+                <li class="tarea">
+                    <input class="pendientesCbox" type="checkbox">
+                    <h5>Caminar</h5>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenedor de tareas finalizadas -->
+        <div class="tareas-terminadas">
+            <h2>Finalizadas</h2>
+            
+            <!-- Lista de tareas finalizadas -->
+            <ul class="lista-terminada">
+                <!-- Elemento de tarea finalizada -->
+                <li class="tarea">
+                    <input class="terminadasCbox" type="checkbox">
+                    <h5>Correr</h5>
+                </li>
+                <!-- Elemento de tarea finalizada -->
+                <li class="tarea">
+                    <input class="terminadasCbox" type="checkbox">
+                    <h5>Cocinar</h5>
+                </li>
+            </ul>
+            <!-- Botón para borrar las tareas finalizadas -->
+            <button class="boton-borrar">Clear</button>
+        </div>
+    </main>
+
+    <!-- Enlace al archivo JavaScript que maneja la lógica de la aplicación -->
+    <script src="../js/entregable1.js"></script>
 </body>
 
 </html>

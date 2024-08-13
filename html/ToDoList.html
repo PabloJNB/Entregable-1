@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <script defer src="../js/ToDoList.js"></script>
+    <link rel="stylesheet" href="../styles/todostyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-izquierda">
+            <button class="header-boton"> <img src="../imagenes/menu.png" width="20px"> </button> <!-- Boton menu desplegable -->
+        </div>
+        
+        <div class="logo">
+        <!--    <img src="" alt="">  Logo de TDL--> 
+            <h1>TDL</h1>
+        </div>
+
+        <nav class="buscador">
+            <button class="header-boton"><img src="../imagenes/busqueda-de-lupa.png" width="15px"></button> <!-- Logo de lupa -->
+            <input type="text" placeholder="Busca tus notas aqui!">
+        </nav>
+        
+        <div class="botones-derecha">
+            <button class="header-boton"> <img src="../imagenes/cargando-flechas.png" width="20px"></button>  <!-- boton para refrescar pagina -->
+            <button class="header-boton"><img src="../imagenes/flecha-de-direccion.png" width="20px"></button> <!-- Cambio de display (distribucion de las notas) -->
+        </div>
+
+    </header>
+    <main>
+        <div class="creador">
+            <input type="text" placeholder="Titulo de la Nota">
+            <button> <img src="../imagenes/boton-mas.png" width="15px"></button> <!-- boton para agregar nota -->
+        </div>
+
+        <div class="contenedor-de-listas">
+            <div class="listas-creadas">
+                <div class="lista">
+                    <h3>Tareas</h3>
+                    <ul class="ul-creadas">
+                        <li> <input type="checkbox">Caminar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="listas-generales">
+                <div class="lista-en-proceso">
+                    <h3>En Proceso</h3>
+                    <ul class="ul-en-proceso">
+                    </ul>
+                </div>
+
+                <div class="lista-terminada">
+                    <h3>Terminadas</h3>
+                    <ul class="ul-terminadas">
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+
+    </main>
+</body>
+
+</html>

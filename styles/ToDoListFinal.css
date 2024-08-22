@@ -1,0 +1,286 @@
+/*Etoqueta universal para quitar margenes por defecto 
+y poner border-box a todas las etiquetas*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Etiqueta html para definir un ancho y alto del 100% a la pagina web*/
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/*Etiqueta body para estilizar la web*/
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #b99a6d8e;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Etiqueta header para estilizar el encabezado*/
+header {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header h1 {
+    width: fit-content;
+    height: fit-content;
+    font-family: "Grenze Gotisch", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
+}
+
+/*Etiqueta main para estilizar el contenido principal*/
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/*Class para estilizar el formulario de tareas */
+.task-form {
+    width: 33%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 0.5rem;
+    background-color: rgba(236, 218, 101, 0.753);
+}
+
+/*Class que controla los elementos del formulario*/
+.task-form-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.task-form-body label {
+    margin: 3px;
+    height: fit-content;
+    width: fit-content;
+    padding: 0 0.5rem;
+    background-color: rgba(236, 218, 101, 0.753);
+    font-weight: 800;
+    font-size: 12px;
+    border: 1px inset black;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px 1px black;
+
+}
+
+/*Class que controla cada item del formulario*/
+.task-form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: rgba(234, 226, 175, 0.753);
+}
+
+.task-form-content input {
+    height: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/*Class que controla el contenedor del boton del Submit*/
+.task-form-button {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+/*Controlar el boton de Submit*/
+.task-form-button button {
+    padding: 3px 6px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Class que controla el contenedor de las tareas creadas*/
+.task-list {
+    width: 33%;
+    height: 347px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(151, 130, 229);
+}
+
+
+/*Class que controla el Ul de tareas creadas*/
+.task-list-container {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow: scroll;
+}
+
+/*Class que controla el li de las tareas creadas*/
+.task {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 10px;
+    list-style: none;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0px; */
+    flex: 1 1 95px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    background-color: rgb(181, 167, 241);
+}
+
+/* Controlar los titulos de la tarea */
+.task h5 {
+    margin: 6px;
+    height: fit-content;
+    width: fit-content;
+    padding: 0 0.5rem;
+    background-color: rgba(157, 134, 232, 0.779);
+    font-weight: 800;
+    font-size: 12px;
+    border: 1px inset black;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px 1px black;
+}
+
+/*Controlar las descripciones y la fecha de la tareas*/
+.task h6 {
+    margin: 0.5rem 0.2rem;
+}
+
+/*Controlar la posocion y color de los span verdes (completado)*/
+.task .completeSpan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 3px;
+    padding: 0.2rem;
+    background-color: rgba(53, 209, 71, 0.633);
+    border: 2px solid black;
+    border-radius: 0% 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 8px
+}
+
+
+/*Controlar la posocion y color de los span rojos (borrar) de las tareas*/
+.task .deleteSpan {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3px;
+    padding: 0.2rem;
+    background-color: rgba(255, 0, 0, 0.633);
+    border: 2px solid black;
+    border-radius: 50% 0%;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+/*Class que controla el contenedor de las tareas terminadas*/
+.task-finish {
+    width: 33%;
+    height: 347px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 0.5rem;
+    background-color: rgb(245, 118, 75);
+}
+
+
+
+/*Class que controla el ul de tareas terminadas*/
+.task-finish-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: scroll;
+}
+
+/* Class que controla el scroll y lo vuelve transparente*/
+.task-list-container::-webkit-scrollbar,
+.task-finish-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/*Class que controla el li de las tareas terminadas*/
+.finished-task {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    text-decoration: line-through;
+    background-color: rgb(250, 176, 130);
+}
+
+/*Class que controla el boton de limpiar tareas*/
+.task-finish-button {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+/*Controlar el boton de limpiar tareas*/
+.task-finish-button button {
+    padding: 3px 6px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}

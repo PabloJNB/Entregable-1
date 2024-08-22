@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <script defer src="../js/ToDoListFinal.js"></script>
+    <link rel="stylesheet" href="../styles/ToDoListFinal.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>To Do List</h1>
+    </header>
+
+    <main>
+        <form class="task-form">
+            <div class="task-form-body">
+                <h4>Ingresar Tarea</h4>
+                <hr style="border-top: 1px solid black" />
+
+                <div class="task-form-content">
+                    <label>Titulo</label>
+                    <input type="text" required placeholder="Estudiar" id="title-input">
+                </div>
+
+                <div class="task-form-content">
+                    <label>Descripcion</label>
+                    <input type="text" required placeholder="Biologia y Matematica" id="description-input">
+                </div>
+
+                <div class="task-form-content">
+                    <label>Fecha</label>
+                    <input type="date" required id="date-input">
+                </div>
+            </div>
+
+            <div class="task-form-button">
+                <button type="submit" class="submit-button">Agregar</button>
+            </div>
+        </form>
+
+        <section class="task-list">
+            <div class="task-list-info">
+                <h4>Tareas </h4>
+                <hr style="border-top: 1px solid black" />
+            </div>
+            <ul class="task-list-container">
+            </ul>
+        </section>
+
+        <section class="task-finish">
+            <div class="task-finish-info">
+                <h4>Terminadas </h4>
+                <hr style="border-top: 1px solid black" />
+            </div>
+            <ul class="task-finish-container">
+            </ul>
+            <div class="task-finish-button">
+                <button id="delete-all-tasks">Limpiar</button>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

@@ -98,7 +98,7 @@ function addTask(event) {
     createTaskComponent(newTask);
 
     // Resetea el formulario
-    // document.querySelector("form").reset();
+    document.querySelector("form").reset();
 }
 // Cargar el formulario, agregar event listener al boton submit
 //  y correr la funcion de agregar tarea
@@ -143,3 +143,5 @@ document.getElementById("delete-all-tasks").addEventListener("click", () => {
     const finishContainer = document.querySelector(".task-finish-container");
     finishContainer.innerHTML = "";  // Vaciar el contenido del contenedor de tareas terminadas
 });
+
+

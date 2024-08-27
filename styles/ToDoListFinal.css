@@ -16,7 +16,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: #b99a6d8e;
+    background-color: #f1efea;
     display: flex;
     flex-direction: column;
 }
@@ -27,6 +27,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    border: #ffffff solid 1px;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+    background-color: #000000d3; /* Un beige claro y suave */
+
+
 }
 
 header h1 {
@@ -36,6 +43,10 @@ header h1 {
     font-weight: 500;
     font-style: normal;
     font-size: 35px;
+    background: linear-gradient(to right, #B5EAD7, #cba9e0,#f1ffd6);
+    background-clip: text; /*esto lo que hace es que el gradiente se aplica a la letra y no al fondo*/
+    color: transparent;
+
 }
 
 /*Etiqueta main para estilizar el contenido principal*/
@@ -43,6 +54,7 @@ main {
     display: flex;
     flex-direction: row;
     height: 100%;
+    margin-top: 20px;
 }
 
 /*Class para estilizar el formulario de tareas */
@@ -57,7 +69,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 0 0.5rem;
-    background-color: rgba(236, 218, 101, 0.753);
+    background-color:#B5EAD7;
 }
 
 /*Class que controla los elementos del formulario*/
@@ -65,20 +77,6 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.task-form-body label {
-    margin: 3px;
-    height: fit-content;
-    width: fit-content;
-    padding: 0 0.5rem;
-    background-color: rgba(236, 218, 101, 0.753);
-    font-weight: 800;
-    font-size: 12px;
-    border: 1px inset black;
-    border-radius: 5px;
-    box-shadow: 0px 1px 0px 1px black;
-
 }
 
 /*Class que controla cada item del formulario*/
@@ -92,11 +90,26 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 0.5rem 0;
     padding: 0.5rem;
-    background-color: rgba(234, 226, 175, 0.753);
+    background-color: #cdebe0;
+}
+
+.task-form-content label {
+margin: 3px;
+    height: fit-content;
+    width: fit-content;
+    padding: 0 0.5rem;
+    background-color:#B5EAD7;
+    font-weight: 800;
+    font-size: 12px;
+    border: 1px inset black;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px 1px black;
+
 }
 
 .task-form-content input {
     height: 25px;
+    width: 100%;
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
@@ -108,9 +121,11 @@ main {
     justify-content: center;
     margin: 0.5rem;
 }
-
+.submit-button:hover{
+    background-color:  rgba(53, 209, 71, 0.633);
+}
 /*Controlar el boton de Submit*/
-.task-form-button button {
+.submit-button {
     padding: 3px 6px;
     border: 2px solid black;
     border-radius: 10px;
@@ -132,7 +147,7 @@ main {
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgb(151, 130, 229);
+    background-color: #cba9e0;
 }
 
 
@@ -155,6 +170,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 100px;
     height: fit-content;
     border: 2px solid black;
     border-radius: 10px;
@@ -165,7 +181,7 @@ main {
     flex: 1 1 95px;
     position: relative;
     padding-bottom: 0.5rem;
-    background-color: rgb(181, 167, 241);
+    background-color: #dac4e8;
 }
 
 /* Controlar los titulos de la tarea */
@@ -174,7 +190,7 @@ main {
     height: fit-content;
     width: fit-content;
     padding: 0 0.5rem;
-    background-color: rgba(157, 134, 232, 0.779);
+    background-color: #cba9e0;
     font-weight: 800;
     font-size: 12px;
     border: 1px inset black;
@@ -183,8 +199,28 @@ main {
 }
 
 /*Controlar las descripciones y la fecha de la tareas*/
-.task h6 {
+.task-description {
+    font-size: 14px;
+    font-weight: 600;
     margin: 0.5rem 0.2rem;
+    height: fit-content;
+    width: 80%;
+    border: #000000 0.5px solid;
+    background-color: #c19ed7;
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 1px black;
+    padding: 0.5rem;
+}
+
+.task-date {
+    margin: 0.5rem 0.2rem;
+    height: fit-content;
+    width: 50%;
+    background-color: #cba9e0;
+    border: 1px inset black;
+    border-radius: 5px;
+    box-shadow: 0px 1px 0px 1px black;
+    padding: 0.1rem;
 }
 
 /*Controlar la posocion y color de los span verdes (completado)*/
@@ -230,7 +266,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin: 0 0.5rem;
-    background-color: rgb(245, 118, 75);
+    background-color: #c6daa2;
 }
 
 
@@ -260,10 +296,9 @@ main {
     height: fit-content;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     list-style: none;
     text-decoration: line-through;
-    background-color: rgb(250, 176, 130);
+    background-color: #f1ffd6;
 }
 
 /*Class que controla el boton de limpiar tareas*/
@@ -274,7 +309,7 @@ main {
 }
 
 /*Controlar el boton de limpiar tareas*/
-.task-finish-button button {
+#delete-all-tasks {
     padding: 3px 6px;
     border: 2px solid black;
     border-radius: 10px;
@@ -283,4 +318,90 @@ main {
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+}
+
+#delete-all-tasks:hover{
+    background-color: rgb(225, 124, 124);
+}
+
+
+@media screen and (max-width: 480px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .task-form {
+        width: 90%;
+    }
+
+    .task-list {
+        min-height: 400px;
+        width: 90%;
+    }
+
+    .task{
+        min-width: 90%;
+    }
+    .task-finish {
+        min-height: 400px;
+        width: 90%;
+    }   
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .task-form {
+        width: 42%;
+    }
+
+    .task-list {
+        width: 42%;
+    }
+
+    .task-finish {
+        width: 90%;
+}
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .task-form {
+        width: 90%;
+    }
+
+    .task-list {
+        width: 42%;
+    }
+
+    .task-finish {
+        width: 42%;
+}
+}
+
+@media screen and (min-width: 1024px){
+    main{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .task-form {
+        width: 90%;
+    }
+
+    .task-list {
+        width: 44%;
+    }
+
+    .task-finish {
+        width: 42%;
+}
 }

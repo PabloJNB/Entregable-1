@@ -1,19 +1,6 @@
-const predefinedTasks = [
-    {
-        id: 0,
-        title: "Entregable",
-        description: "Terminar js y css",
-        date: "2024-08-21",
-    },
-    {
-        id: 1,
-        title: "Ir al gym",
-        description: "Hacer rutina",
-        date: "2024-09-22",
-    },
-];
-let tasks = [...predefinedTasks];
-let currentIdNumber = predefinedTasks.length;
+
+let tasks = [];
+let currentIdNumber = tasks.length;
 
 // Funcion para crear los componenentes de cada tarea
 function createTaskComponent(task) {
